@@ -56,11 +56,19 @@ public class DialogAddUser implements View.OnClickListener{
 
             this.usuario = new Usuario(generarId(), this.dialog_username.getText().toString(), this.spinner.getSelectedItem().toString(), this.admin.isChecked());
 
+            Log.d("", this.usuario.toString());
+
             JSONObject usuarioJsonObject = this.generarObjetoJson(this.usuario);
 
             this.agregarUsuarioASharedPreference(usuarioJsonObject);
 
+            dialog.dismiss();
+
             // Log.d("", this.usuario.toString());
+
+        } else {
+
+            Log.d("", "Nombre de usuario vacío");
 
         }
 

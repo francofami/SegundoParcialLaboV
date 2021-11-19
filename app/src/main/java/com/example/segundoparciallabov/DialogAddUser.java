@@ -34,6 +34,7 @@ public class DialogAddUser implements View.OnClickListener{
     ToggleButton admin;
 
     Button botonGuardar;
+    Button botonCerrar;
 
     private IOnGuardarClick listener;
 
@@ -148,6 +149,9 @@ public class DialogAddUser implements View.OnClickListener{
 
         this.botonGuardar = (Button) dialog.findViewById(R.id.dialog_guardar);
         botonGuardar.setOnClickListener(this);
+
+        this.botonCerrar = (Button) dialog.findViewById(R.id.dialog_cerrar);
+        botonCerrar.setOnClickListener(v -> {dialog.dismiss();});
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this.activity, R.array.spinner, android.R.layout.simple_spinner_item);
 

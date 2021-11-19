@@ -69,7 +69,7 @@ public class DialogAddUser implements View.OnClickListener{
 
         } else {
 
-            Log.d("", "Nombre de usuario vacío");
+            Toast.makeText(admin.getContext(), "Username vacío", (int) 60).show();
 
         }
 
@@ -206,8 +206,5 @@ public class DialogAddUser implements View.OnClickListener{
         Log.d("","hice click en guardar XD");
 
         this.guardarUsuario();
-
-        // this.usuario = new Usuario(666, "", "","");
-        // listener.onGuardarClick(this.usuario);
     }
 }
